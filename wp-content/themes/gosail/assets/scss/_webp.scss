@@ -1,0 +1,71 @@
+.webp {
+    #booking {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+        url(../images/optimized/hero.webp);   
+    }
+
+    #faq {
+        background-image: url(../images/optimized/ship-side.webp);
+  
+        &::after {
+            background-image: url(../images/optimized/ship-side-bg.webp);
+        }
+    
+        &::before {
+            background-image: url(../images/optimized/birds-1.webp);
+        }
+    }
+
+    #why-us {
+        &:before {
+            background-image: url(../images/optimized/birds-2.webp);
+        }
+    
+        &:after {
+            background-image: url(../images/optimized/birds-1.webp);
+        }
+        .ship-wrapper {
+            background-image: url(../images/optimized/islands-bg.webp);
+        }
+        
+        .ship {
+            background-image: url(../images/optimized/boat.webp);
+        }
+    }  
+}
+
+.no-png {
+    #booking {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+        url(../images/optimized/hero.jpg);   
+    }
+
+    #faq {
+        background-image: url(../images/optimized/ship-side.png);
+  
+        &::after {
+            background-image: url(../images/optimized/ship-side-bg.png);
+        }
+    
+        &::before {
+            background-image: url(../images/optimized/birds-1.png);
+        }
+    }
+
+    #why-us {
+        &:before {
+            background-image: url(../images/optimized/birds-2.png);
+        }
+    
+        &:after {
+            background-image: url(../images/optimized/birds-1.png);
+        }
+        .ship-wrapper {
+            background-image: url(../images/optimized/islands-bg.png);
+        }
+        
+        .ship {
+            background-image: url(../images/optimized/boat.p);
+        }
+    }  
+}

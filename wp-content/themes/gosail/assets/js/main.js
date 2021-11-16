@@ -1,4 +1,21 @@
 $(document).ready(function(){
+
+    $('#destination-slider').slick({
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        mobileFirst: true,
+        appendDots: $('.slick-control-wrapper'),
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        responsive: [
+            {
+              breakpoint: 900,
+              settings: 'unslick'
+            }
+          ]
+    });
+
     $('#testimonials-slider').slick({
         infinite: true,
         slidesToShow: 2,
@@ -12,7 +29,8 @@ $(document).ready(function(){
               breakpoint: 600,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                dots: false
               }
             }
           ]
@@ -22,7 +40,9 @@ $(document).ready(function(){
         centerMode: true,
         centerPadding: '201px',
         slidesToShow: 4,
+        swipeToSlide: true,
         arrows: false,
+        initialSlide: 2,
         responsive: [
             {
                 breakpoint: 1300,
@@ -66,6 +86,10 @@ $(document).ready(function(){
             $video.get(0).pause(); 
             $(this).addClass('paused'); 
         }
+    });
+
+    $('.nav-mobile-btn').click(function (){
+        $('#overlay').toggleClass("active");
     });
   });
 

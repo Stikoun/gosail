@@ -1,0 +1,28 @@
+
+footer {
+    background: $blue;
+    margin: 0 auto;
+    width: 100%;
+
+    .container {
+        max-width: 1563px;
+    }
+
+    .navigation {
+        padding: 33px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #absolute-footer {
+        margin-top: 64px;
+        padding-bottom: 50px;
+        span {
+            margin-right: 32px;
+        }
+
+        a,
+        span {
+            color: $white-trans;
+        }
+    }
+}

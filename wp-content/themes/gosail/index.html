@@ -12,33 +12,51 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="navigation">
             <div class="logo-wrapper">
                 <a href="#">
-                    <img src="assets/images/logo-gosail.svg" alt="Logo Gosail.cz">
+                    <img src="assets/images/icons/logo-gosail.svg" alt="Logo Gosail.cz">
                 </a>
             </div>
+            <div class="nav-mobile-btn open"></div>
             <div class="nav-wrapper">
-                <a href="#">Vyhledat loď</a>
-                <a href="#">Loď s kapitánem</a>
-                <a href="#">O dovolené</a>
-                <a href="#">Pojištění</a>
+                <nav>
+                    <a href="#">Vyhledat loď</a>
+                    <a href="#">Loď s kapitánem</a>
+                    <a href="#">O dovolené</a>
+                    <a href="#">Pojištění</a>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
+    <div id="overlay">
+        <div class="nav-mobile-btn close"></div>
+        <nav>
+            <a href="#">Vyhledat loď</a>
+            <a href="#">Loď s kapitánem</a>
+            <a href="#">O dovolené</a>
+            <a href="#">Pojištění</a>
+        <nav>
+    </div>
     <main>
+        <div class="sticky-bar">
+            <div class="content">
+                <span>Potřebujete kapitána?</span>
+            </div>
+        </div>
         <section id="booking">
             <div class="container small h-center">
                 <div class="heading-wrapper">
                     <h1>Rezervace Yacht</h1>
-                    <div class="short-divider"></div>
+                    <div class="short-divider white"></div>
                     <p>Lorem ipsum dolor sit amet dolor sit amet<br>
                         lorem ipsum dolor sit amet.</p>
                 </div>
                 <form action="#">
                     <div class="input-wrapper">
                         <label for="destination">Destinace</label>
-                        <select name="destination" id="destination" placeholder="Vyberte destinace">
+                        <select name="destination" id="destination">
+                            <option selected hidden value="null">Vyberte destinace</option>
                             <option value="canarian_islands">Kanárské ostrovy</option>
                             <option value="croatia">Chorvatsko</option>
                             <option value="france">Francie</option>
@@ -51,7 +69,8 @@
                     </div>
                     <div class="input-wrapper">
                         <label for="ship">Typ lodě</label>
-                        <select name="ship" id="ship" placeholder="Vyberte loď">
+                        <select name="ship" id="ship">
+                            <option selected hidden value="null">Vyberte loď</option>
                             <option value="yacht">Jachta</option>
                             <option value="jetski">Vodní skůtr</option>
                             <option value="catamaran">Katamarán</option>
@@ -73,30 +92,30 @@
                     </div>
                     <div class="long-divider"></div>
                 </div>
-                <div class="destination-wrapper">
+                <div class="destination-wrapper" id="destination-slider">
                     <div class="destination">
-                        <img src="assets/images/destination-1.jpg" alt="Loď kymácející se na vlnách moře">
+                        <img src="assets/images/optimized/destination-1.jpg" alt="Loď kymácející se na vlnách moře">
                         <h4>Chorvatsko</h4>
                         <p>Lorem ipsum dolor sit amet, consectetuer<br>adipiscing elit. Duis viverra dia.</p>
                         <a href="#">Zjistit více</a>
                         <div class="long-divider"></div>
                     </div>
                     <div class="destination">
-                        <img src="assets/images/destination-2.jpg" alt="Muž v plavkách držící se lodi vykloněný nad otevřeným mořem">
+                        <img src="assets/images/optimized/destination-2.jpg" alt="Muž v plavkách držící se lodi vykloněný nad otevřeným mořem">
                         <h4>Chorvatsko</h4>
                         <p>Lorem ipsum dolor sit amet, consectetuer<br>adipiscing elit. Duis viverra dia.</p>
                         <a href="#">Zjistit více</a>
                         <div class="long-divider"></div>
                     </div>
                     <div class="destination">
-                        <img src="assets/images/destination-3.jpg" alt="Muž ve vzduchu dopadající do bazénu. Za ním muž pozorující muže ve vzduchu.">
+                        <img src="assets/images/optimized/destination-3.jpg" alt="Muž ve vzduchu dopadající do bazénu. Za ním muž pozorující muže ve vzduchu.">
                         <h4>Chorvatsko</h4>
                         <p>Lorem ipsum dolor sit amet, consectetuer<br>adipiscing elit. Duis viverra dia.</p>
                         <a href="#">Zjistit více</a>
                         <div class="long-divider"></div>
                     </div>
                     <div class="destination">
-                        <img src="assets/images/destination-4.jpg" alt="Ptačí perspektiva na otevřené moře s větším množstvím lodí.">
+                        <img src="assets/images/optimized/destination-4.jpg" alt="Ptačí perspektiva na otevřené moře s větším množstvím lodí.">
                         <h4>Chorvatsko</h4>
                         <p>Lorem ipsum dolor sit amet, consectetuer<br>adipiscing elit. Duis viverra dia.</p>
                         <a href="#">Zjistit více</a>
@@ -109,40 +128,55 @@
             <div class="container">
                 <div class="heading-wrapper">
                     <h2>Proč s námi</h2>
-                    <div class="short-divider"></div>
+                    <div class="short-divider gray"></div>
                     <p>Lorem ipsum dolor sit amet dolor sit amet<br>
                         lorem ipsum dolor sit amet.</p>
                 </div>
                 <div class="ship-wrapper">
                     <div class="ship">
                         <div class="reasons-wrapper">
-                            <div class="reason">
+                            <div class="reason right">
                                 <div class="icon"></div>
                                 <div class="content">
                                     <h4>Důvod 1</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis viverra diam non justo.</p>
                                 </div>
                             </div>
+                            <div class="reason left">
+                                <div class="icon"></div>
+                                <div class="content">
+                                    <h4>Důvod 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis viverra diam non justo.</p>
+                                </div>
+                            </div>
+                            <div class="reason right">
+                                <div class="icon"></div>
+                                <div class="content">
+                                    <h4>Důvod 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis viverra diam non justo.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </section>
+        </section>      
         <section id="gallery">
             <div class="absolute-header">
                 <h2>Fotogalerie</h2>
             </div>
             <div class="gallery-wrapper" id="gallery-slider">
-                <img src="assets/images/destination-2.jpg" alt="">
-                <img src="assets/images/destination-3.jpg" alt="">
-                <img src="assets/images/destination-4.jpg" alt="">
-                <img src="assets/images/destination-2.jpg" alt="">
-                <img src="assets/images/destination-3.jpg" alt="">
-                <img src="assets/images/destination-4.jpg" alt="">
+                <img src="assets/images/optimized/destination-2.jpg" alt="">
+                <img src="assets/images/optimized/destination-3.jpg" alt="">
+                <img src="assets/images/optimized/destination-4.jpg" alt="">
+                <img src="assets/images/optimized/destination-2.jpg" alt="">
+                <img src="assets/images/optimized/destination-3.jpg" alt="">
+                <img src="assets/images/optimized/destination-4.jpg" alt="">
 
             </div>
         </section>
+        <div id="bg-section-first"></div>
         <section id="testimonials">
             <div class="container medium">
                 <div class="top-wrapper">
@@ -151,8 +185,8 @@
                 </div>
                 <div class="testimonials-wrapper" id="testimonials-slider">
                     <div class="testimonial">
-                        <div class="header" style="background-image:url(assets/images/testimonial-1.jpg)">
-                            <img src="assets/images/avatar-1.jpg" alt="">
+                        <div class="header" style="background-image:url(assets/images/optimized/testimonial-1.jpg)">
+                            <img src="assets/images/optimized/avatar-1.jpg" alt="">
                         </div>
                         <div class="content">
                             <h4>Josef Novák</h4>
@@ -162,8 +196,8 @@
                         </div>
                     </div>
                     <div class="testimonial">
-                        <div class="header" style="background-image:url(assets/images/testimonial-2.jpg)">
-                            <img src="assets/images/avatar-2.jpg" alt="">
+                        <div class="header" style="background-image:url(assets/images/optimized/testimonial-2.jpg)">
+                            <img src="assets/images/optimized/avatar-2.jpg" alt="">
                         </div>
                         <div class="content">
                             <h4>Josef Novák</h4>
@@ -173,8 +207,8 @@
                         </div>
                     </div>
                     <div class="testimonial">
-                        <div class="header" style="background-image:url(assets/images/testimonial-2.jpg)">
-                            <img src="assets/images/avatar-2.jpg" alt="">
+                        <div class="header" style="background-image:url(assets/images/optimized/testimonial-2.jpg)">
+                            <img src="assets/images/optimized/avatar-2.jpg" alt="">
                         </div>
                         <div class="content">
                             <h4>Josef Novák</h4>
@@ -184,8 +218,8 @@
                         </div>
                     </div>
                     <div class="testimonial">
-                        <div class="header" style="background-image:url(assets/images/testimonial-2.jpg)">
-                            <img src="assets/images/avatar-2.jpg" alt="">
+                        <div class="header" style="background-image:url(assets/images/optimized/testimonial-2.jpg)">
+                            <img src="assets/images/optimized/avatar-2.jpg" alt="">
                         </div>
                         <div class="content">
                             <h4>Josef Novák</h4>
@@ -217,12 +251,12 @@
                 </div>
             </div>
         </section>
-        <div class="bg-section-first"></div>
+        <div id="bg-section-second"></div>
         <section id="faq">
             <div class="container small">
                 <div class="heading-wrapper">
                     <h2>FAQ</h2>
-                    <div class="short-divider"></div>
+                    <div class="short-divider gray"></div>
                     <p>Nejčastější dotazy před první<br> 
                         dovolenou na moři</p>
                 </div>
@@ -262,27 +296,29 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <nav>
-                    <div class="logo-wrapper">
-                        <a href="#">
-                            <img src="assets/images/logo-gosail.svg" alt="Logo Gosail.cz">
-                        </a>
-                    </div>
-                    <div class="nav-wrapper">
+    </main>
+    <footer>
+        <div class="container">
+            <div class="navigation">
+                <div class="logo-wrapper">
+                    <a href="#">
+                        <img src="assets/images/icons/logo-gosail.svg" alt="Logo Gosail.cz">
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <nav>
                         <a href="#">Vyhledat loď</a>
                         <a href="#">Loď s kapitánem</a>
                         <a href="#">O dovolené</a>
                         <a href="#">Pojištění</a>
-                    </div>
-                </nav>
-                <div id="absolute-footer">
-                    <span>GoSail Copyright 2021</span>
-                    <a href="#">Privacy Policy</a>
+                    </nav>
                 </div>
             </div>
-        </footer>
-    </main>
+            <div id="absolute-footer">
+                <span>GoSail Copyright 2021</span>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

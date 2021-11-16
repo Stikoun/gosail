@@ -1,0 +1,286 @@
+#booking {
+    position: relative;
+    background-repeat: no-repeat;
+    height: 744px;
+    margin: auto 0;
+    // background-image: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+    // url(../images/optimized/hero.jpg);
+    background-position: 10% 70%;
+    background-size: cover;
+
+    .heading-wrapper {
+        color: $white;
+
+        p {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+
+#faq {
+    position: relative;
+    padding-bottom: 160px;
+    // background-image: url(../images/optimized/ship-side.png);
+    background-repeat: no-repeat;
+    background-position: 99% 65px;
+    background-size: contain;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        content: '';
+        // background-image: url(../images/optimized/ship-side-bg.png);
+        background-repeat: no-repeat;
+        background-position: 100% 65px;
+        background-size: contain;
+        bottom: -200px;
+        right: -450px;
+        overflow: hidden;
+        height: 650px;
+        width: 1009px;
+        z-index: -1;
+    }
+
+    &::before {
+        position: absolute;
+        right: 0;
+        content: '';
+        // background-image: url(../images/optimized/birds-1.png);
+        background-repeat: no-repeat;
+        background-position: 100% 65px;
+        background-size: contain;
+        top: 115px;
+        left: 0;
+        overflow: hidden;
+        height: 527px;
+        width: 539px;
+        z-index: -1;
+    }
+}
+
+#video {
+    .video-wrapper {
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.35));
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+        }
+
+        video {
+            width: 100%;
+            height: 878px;
+            object-fit: cover;
+        }
+
+        .control {
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 136px;
+            height: 136px;
+            border: 1px solid $white;
+            border-radius: 100%;
+
+            @include bg-init();
+            background-size: 100%;
+            background-image: url(../images/icons/pause.svg);
+
+            &.paused {
+                background-image: url(../images/icons/play.svg);
+                background-size: 50%;
+            }
+        }
+    }
+}
+
+#why-us {  
+    position: relative;
+
+    .container {
+        max-width: 1670px;
+    }
+    
+    &:before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/optimized/birds-2.png);
+        background-repeat: no-repeat;
+        background-position: 100% 65px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -120px;
+        overflow: hidden;
+        height: 527px;
+        width: 539px;
+        z-index: -1;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        // background-image: url(../images/optimized/birds-1.png);
+        background-repeat: no-repeat;
+        background-position: 100% 65px;
+        top: 30%;
+        transform: translateY(-30%);
+        right: -100px;
+        overflow: hidden;
+        height: 527px;
+        width: 539px;
+        z-index: -1;
+    }
+    .ship-wrapper {
+        // background-image: url(../images/optimized/islands-bg.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 96px;
+        width: 1670px;
+    }
+    
+    .ship {
+        // background-image: url(../images/optimized/boat.png);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 1100px;
+        height: 1445px;
+        margin: 0 auto;
+    }
+
+    .reasons-wrapper {
+        padding-top: 98px;
+    }
+
+    .reason {
+        position: relative;
+        background: $blue;
+        width: 490px;
+        margin-bottom: 160px;
+
+        &.left {
+            padding: 37px 97px 40px 84px;
+            right: -25px;
+
+
+            .icon {
+                right: -51px;
+            }
+        }
+
+        &.right {
+            padding: 37px 36px 40px 145px;
+            margin-left: auto;
+            left: -95px;
+
+            .icon {
+                left: -51px;
+            }
+        }
+      
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $orange;
+            @include bg-init();
+            background-image: url(../images/icons/reason-icon.svg);
+            background-size: 59px;
+            border-radius: 100%;
+            width: 102px;
+            height: 102px;
+        }
+        
+        .content {
+            h4,
+            p {
+                color: $white;
+                margin: 0;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                color: $white-trans;
+                margin-top: 8px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+#gallery {
+    position: relative;
+
+    .absolute-header {
+        position: absolute;
+        top: -188px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        h2 {
+            font-family: $dmserif;
+            font-size: 225px;
+            margin: 0;
+        }
+    }
+    #gallery-slider {
+        img {
+            object-fit: cover;
+            margin: 0 16px;
+        }
+        img:nth-child(3n) {
+            height: 351px;
+        }
+        img:nth-child(3n + 1) {
+            height: 455px;
+        }
+        img:nth-child(3n + 2) {
+            height: 549px;
+        }
+    }    
+}
+
+#bg-section-first {
+    background-color: $blue-trans;
+    width: 100%;
+    padding-top: 965px;
+    margin-top: -965px;
+    padding-bottom: 448px;
+    margin-bottom: -448px;
+}
+
+#bg-section-second {
+    background-color: $blue-trans;
+    padding-top: 439px;
+    margin-top: -439px;
+    padding-bottom: 461px;
+    margin-bottom: -461px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+#overlay {
+    display: none;
+}
+
+#why-us,
+#faq {
+    .heading-wrapper {
+        p {
+            color: $blue;
+        }
+    }
+}

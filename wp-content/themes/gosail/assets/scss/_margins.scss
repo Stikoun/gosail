@@ -1,0 +1,31 @@
+#last-first-minute {
+    margin-top: 147px;
+}
+
+#why-us {
+    margin-top: 181px;
+}
+
+#gallery {
+    margin-top: 250px;
+}
+
+#video,
+#testimonials {
+    margin-top: 163px;
+}
+
+#faq {
+    margin-top: 177px;
+}
+
+@media only screen and (max-width: 1000px) { 
+    #last-first-minute,
+    #why-us,
+    #gallery,
+    #video,
+    #testimonials,
+    #faq{
+        margin-top: 120px;
+    }
+}

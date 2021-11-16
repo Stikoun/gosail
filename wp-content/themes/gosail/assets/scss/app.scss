@@ -1,0 +1,25 @@
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/slick-carousel/slick/slick';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@300;400&display=swap');
+
+@mixin bg-init {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin border-reset {
+    border: none;
+    outline: none;
+}
+
+@import 'pallete';
+@import 'typography';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'sections';
+@import 'margins';
+@import 'webp';
+@import 'responsive';
+
